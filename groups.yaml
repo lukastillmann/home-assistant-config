@@ -100,9 +100,9 @@ volume:
   name: Lautstärke einstellen
   icon: mdi:volume_high
   entities:
-    - input_slider.volume_kuche
-    - input_slider.volume_wohnzimmer
-    - input_slider.volume_kinderzimmer
-    - input_slider.volume_schlafzimmer
-    - input_slider.volume_badezimmer
+    - input_number.volume_kuche
+    - input_number.volume_wohnzimmer
+    - input_number.volume_kinderzimmer
+    - input_number.volume_schlafzimmer
+    - input_number.volume_badezimmer
 

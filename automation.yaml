@@ -70,17 +70,77 @@
     platform: state
     entity_id: media_player.kuche
   action:
-    service: input_slider.select_value
+    service: input_number.select_value
     data_template:
-      entity_id: input_slider.volume_kuche
+      entity_id: input_number.volume_kuche
       value: '{{ trigger.to_state.attributes.volume_level }}'
 
 - alias: Set Volume from Slider Küche
   trigger:
     platform: state
-    entity_id: input_slider.volume_kuche
+    entity_id: input_number.volume_kuche
   action:
     service: media_player.volume_set
     data_template:
       entity_id: media_player.kuche
+      volume_level: '{{ trigger.to_state.state }}'
+
+- alias: Set Volume Slider Wohnzimmer
+  trigger:
+    platform: state
+    entity_id: media_player.wohnzimmer
+  action:
+    service: input_number.select_value
+    data_template:
+      entity_id: input_number.volume_wohnzimmer
+      value: '{{ trigger.to_state.attributes.volume_level }}'
+
+- alias: Set Volume from Slider Wohnzimmer
+  trigger:
+    platform: state
+    entity_id: input_number.volume_wohnzimmer
+  action:
+    service: media_player.volume_set
+    data_template:
+      entity_id: media_player.wohnzimmer
+      volume_level: '{{ trigger.to_state.state }}'
+
+- alias: Set Volume Slider Kinderzimmer
+  trigger:
+    platform: state
+    entity_id: media_player.kinderzimmer
+  action:
+    service: input_number.select_value
+    data_template:
+      entity_id: input_number.volume_kinderzimmer
+      value: '{{ trigger.to_state.attributes.volume_level }}'
+
+- alias: Set Volume from Slider Kinderzimmer
+  trigger:
+    platform: state
+    entity_id: input_number.volume_kinderzimmer
+  action:
+    service: media_player.volume_set
+    data_template:
+      entity_id: media_player.kinderzimmer
+      volume_level: '{{ trigger.to_state.state }}'
+
+- alias: Set Volume Slider Schlafzimmer
+  trigger:
+    platform: state
+    entity_id: media_player.schlafzimmer
+  action:
+    service: input_number.select_value
+    data_template:
+      entity_id: input_number.volume_schlafzimmer
+      value: '{{ trigger.to_state.attributes.volume_level }}'
+
+- alias: Set Volume from Slider Schlafzimmer
+  trigger:
+    platform: state
+    entity_id: input_number.volume_schlafzimmer
+  action:
+    service: media_player.volume_set
+    data_template:
+      entity_id: media_player.schlafzimmer
       volume_level: '{{ trigger.to_state.state }}'
