@@ -1,0 +1,108 @@
+####################################################
+##                     Views                       #
+####################################################
+
+lights:
+  view: yes
+  icon: mdi:lightbulb
+  name: Lichter
+  entities:
+    - group.lights_wohnzimmer
+
+music:
+  view: yes
+  name: Musik
+  icon: mdi:radio
+  entities:
+    - group.radio
+    - group.radioselect
+    - group.volume
+    - media_player.kuche
+    - media_player.wohnzimmer
+    - media_player.schlafzimmer
+    - media_player.kinderzimmer
+    - media_player.badezimmer
+
+climate:
+  view: yes
+  name: Heizung
+  icon: mdi:thermometer
+  entities:
+    - group.lyric
+    - group.weather
+
+Wecker:
+  view: yes
+  name: Wecker
+  icon: mdi:alarm
+  entities:
+    - group.alarm
+    - group.radioselect
+    - group.volume
+
+####################################################
+##              Sensor Groups                      #
+####################################################
+
+lyric:
+  name: Thermostat
+  entities:
+    - climate.lyric
+
+weather:
+  name: Wetter
+  entities:
+    - sensor.wetter_temperature
+    - sensor.wetter_current
+    - sensor.morgen_temperature
+    - sensor.morgen_condition
+#    - sensor.wetter_condition # what is this?
+
+qnap:
+  - sensor.valentine_status
+  - sensor.valentine_volume_used_volume_1
+  - sensor.valentine_cpu_usage
+
+
+####################################################
+##              Switch Groups                      #
+####################################################
+
+lights_wohnzimmer:
+  name: Wohnzimmerlampen
+  entities:
+    - switch.decke
+    - switch.pflampe
+    - switch.sofa
+    - switch.chillout
+
+
+####################################################
+##              Misc Groups                        #
+####################################################
+
+Radio:
+  - script.radio_start
+  - script.radio_stop
+
+Alarm:
+  - input_boolean.alarm_toggle
+  - input_select.wake_up_time
+  - script.radio_stop
+
+radioselect:
+  name: Radio auswählen
+  entities:
+    - input_select.radio_player
+    - input_select.radio_channel
+
+volume:
+  name: Lautstärke einstellen
+  icon: mdi:volume_high
+  entities:
+    - input_slider.volume_kuche
+    - input_slider.volume_wohnzimmer
+    - input_slider.volume_kinderzimmer
+    - input_slider.volume_schlafzimmer
+    - input_slider.volume_badezimmer
+

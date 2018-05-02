@@ -12,8 +12,8 @@ homeassistant:
 tts:
   - platform: google
 
-#ifttt:
-#  key: !secret ifttt
+ifttt:
+  key: !secret ifttt
 
 # Cloud
 # cloud:
@@ -41,6 +41,7 @@ http:
   # api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   # base_url: example.duckdns.org:8123
+  base_url: http://10.0.0.16:8123
 
 ####################################################
 ##                                                 #
@@ -48,15 +49,14 @@ http:
 ##                                                 #
 ####################################################
 
-#group: !include groups.yaml
+group: !include groups.yaml
 sensor: !include sensors.yaml
-#media_player: !include media_players.yaml
-#notify: !include notify.yaml
-#switch: !include switches.yaml
-#automation: !include automation.yaml
-#device_tracker: !include device_tracker.yaml
-#script: !include scripts.yaml
-#input_boolean: !include input_boolean.yaml
-#input_select: !include input_select.yaml
-#input_slider: !include input_slider.yaml
-#google_assistant: !include google_assistant.yaml
+media_player: !include media_players.yaml
+notify: !include notify.yaml
+switch: !include switches.yaml
+automation: !include automation.yaml
+device_tracker: !include device_tracker.yaml
+script: !include scripts.yaml
+# input_boolean: !include input_boolean.yaml
+# input_select: !include input_select.yaml
+input_number: !include input_number.yaml

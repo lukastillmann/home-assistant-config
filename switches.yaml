@@ -1,0 +1,15 @@
+- platform: rpi_rf
+  gpio: 17
+  switches:
+    decke:
+      code_on: 4194325
+      code_off: 4194324
+    pflampe:
+      code_on: 4210709
+      code_off: 4210708
+    sofa:
+      code_on: 4198421
+      code_off: 4198420
+    chillout:
+      code_on: 4194324,4210709,4198421
+      code_off: 4194324,4210708,4198420

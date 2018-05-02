@@ -1,0 +1,20 @@
+media_player.kinderzimmer:
+  name:
+  platform: cast
+  unique_id: bf3c5efd-a90a-aeda-c05d-b91eb5b6574c
+media_player.badezimmer:
+  name:
+  platform: cast
+  unique_id: cc904358-717d-fdc6-0558-e8ceae797c1a
+media_player.chromecast:
+  name:
+  platform: cast
+  unique_id: 08500101-c742-1611-453e-c7814698106b
+media_player.kuche:
+  name:
+  platform: cast
+  unique_id: 9db2c83e-39bf-9993-2270-f1e27e5dad9a
+media_player.wohnzimmer:
+  name:
+  platform: cast
+  unique_id: 74815dde-7b12-4cb0-e75a-2ffec3975cc0

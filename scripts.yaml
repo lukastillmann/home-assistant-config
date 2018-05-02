@@ -1,0 +1,5 @@
+greeting: !include scripts/greeting.yaml
+test: !include scripts/test.yaml
+# alarm: !include scripts/alarm.yaml
+# radio_start: !include scripts/radiostart.yaml
+# radio_stop: !include scripts/radiostop.yaml

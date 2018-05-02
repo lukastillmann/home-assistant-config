@@ -1,0 +1,7 @@
+- platform: nmap_tracker
+  hosts: 10.0.0.3-99
+  consider_home: 600
+- platform: ping
+  hosts:
+    kathi: 10.0.0.5
+    notebook: 10.0.0.6

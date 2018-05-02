@@ -1,0 +1,29 @@
+####################################################
+##                                                 #
+##               Media Players                     #
+##                                                 #
+####################################################
+
+- platform: cast
+- platform: cast
+  alias: Küche
+  host: 10.0.0.13
+- platform: cast
+  alias: Wohnzimmer
+  host: 10.0.0.11
+- platform: cast
+  alias: Kinderzimmer
+  host: 10.0.0.12
+- platform: cast
+  alias: Badezimmer
+  host: 10.0.0.14
+- platform: cast
+  alias: Schlafzimmer
+  host: 10.0.0.15
+- platform: cast
+  alias: TV
+  host: 10.0.0.10
+
+- platform: spotify
+  client_id: !secret spotify_id
+  client_secret: !secret spotify_secret
