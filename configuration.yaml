@@ -1,0 +1,62 @@
+homeassistant:
+  name: Home
+  latitude: 48.4167
+  longitude: 16.4667
+  elevation: 0
+  unit_system: metric
+  time_zone: Europe/Vienna
+  # Customization file
+  # customize: !include customize.yaml
+
+# Text to speech
+tts:
+  - platform: google
+
+#ifttt:
+#  key: !secret ifttt
+
+# Cloud
+# cloud:
+
+####################################################
+##                                                 #
+##                     Enables                     #
+##                                                 #
+####################################################
+
+# introduction:
+frontend:
+config:
+updater:
+discovery:
+conversation:
+history:
+logbook:
+sun:
+logger:
+map:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  # api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+
+####################################################
+##                                                 #
+##                     Includes                    #
+##                                                 #
+####################################################
+
+#group: !include groups.yaml
+sensor: !include sensors.yaml
+#media_player: !include media_players.yaml
+#notify: !include notify.yaml
+#switch: !include switches.yaml
+#automation: !include automation.yaml
+#device_tracker: !include device_tracker.yaml
+#script: !include scripts.yaml
+#input_boolean: !include input_boolean.yaml
+#input_select: !include input_select.yaml
+#input_slider: !include input_slider.yaml
+#google_assistant: !include google_assistant.yaml

@@ -1,0 +1,37 @@
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+
+### WEATHER ###
+
+# Today
+- platform: yweather
+  name: Wetter
+  monitored_conditions:
+    - weather
+    - weather_current
+#      - temp_min
+#      - temp_max
+    - temperature
+
+# Tomorrow
+- platform: yweather
+  name: Morgen
+  forecast: 1
+  monitored_conditions:
+    - weather
+    - temperature
+
+################
+
+#- platform: qnap
+#  host: 192.168.0.3
+#  username: admin
+#  password:
+#  monitored_conditions:
+#    - status
+#    - cpu_usage
+##    - memory_percent_used
+##    - network_tx
+#    - volume_percentage_used
